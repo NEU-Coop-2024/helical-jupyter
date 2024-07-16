@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "EchoPackage"
+version = "0.1"
+description = "Description of your package"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ipython = "^7.0"
+echo_append = { path = "./echo_append" }
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
