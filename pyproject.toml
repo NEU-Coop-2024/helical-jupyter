@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "EchoPackage"
-version = "0.1"
-description = "Description of your package"
+version = "0.1.0"
+description = ""
 authors = ["Your Name <your.email@example.com>"]
+packages = [{ include = "echo_append" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 ipython = "^7.0"
-echo_append = { path = "./echo_append" }
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
