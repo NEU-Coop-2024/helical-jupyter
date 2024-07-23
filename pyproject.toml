@@ -3,7 +3,9 @@ name = "EchoPackage"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <your.email@example.com>"]
-packages = [{ include = "echo_append" }]
+packages = [
+    { include = "echo_append"}
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
