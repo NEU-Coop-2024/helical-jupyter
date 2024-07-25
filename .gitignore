@@ -1,2 +1,6 @@
 venv
 .idea
+*.txt
+*.err
+poetry.lock
+.venv
