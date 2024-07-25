@@ -22,16 +22,21 @@ Begin by cloning the repository from Github and then navigate to the top directo
 
 `cd ~/{location}/{of}/{project}/helical-jupyter`
 
-While inside the `helical-jupyter` folder, create a virtual environment to install the project and its dependencies
+While inside the `helical-jupyter` folder, create a virtual environment to install the project and its dependencies:
 
-`py -m venv {name of your virtual environment}`
+* Windows: `py -m venv {name of your virtual environment}`
+* OSX: `python3 -m venv {name of your virtual environment}`
 
-Activate your environemnt and install the project
+Activate your virtual environment:
 
-`.\{name of virtual environment}\Sciprts\activate`
+Windows: `.\{name of virtual environment}\Sciprts\activate`
+OSX:`./{name of virtual environment}/bin/activate`
+
+Install the project (make the package accessible from any location when the virtual environment is activated):
+
 `poetry install`
 
-Launch jupyter notebook and create a new notebook
+Launch jupyter notebook and create a new notebook to get started:
 
 `jupyter notebook`
 
