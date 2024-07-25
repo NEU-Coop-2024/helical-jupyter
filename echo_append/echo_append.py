@@ -11,7 +11,7 @@ class EchoMagics(Magics):
     @cell_magic
     def echo_append(self, line, cell):
         self.echo_string += cell + '\n'
-        return self.echo_string + '\nprint("Success!")'
+        exec(self.echo_string + '\nprint("Success!")')
 
 
 def load_ipython_extension(ipython):
