@@ -1,0 +1,5 @@
+diraph G {
+    A -> B
+    B -> C
+    C -> A;
+}
