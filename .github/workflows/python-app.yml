@@ -48,12 +48,12 @@ jobs:
       run: poetry build
 
     - name: Convert notebook to Python script
-      run: jupyter nbconvert --to script ./Untitled.ipynb
+      run: poetry run jupyter nbconvert --to script ./Untitled.ipynb
 
     - name: Run test script
-      run: python ./Untitled.py
+      run: poetry run python ./Untitled.py
 
     - name: Compare generated image with reference image
-      run: python compare_images.py
+      run: poetry run python compare_images.py
 
 
