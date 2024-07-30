@@ -51,7 +51,7 @@ jobs:
       run: poetry run jupyter nbconvert --to script ./Untitled.ipynb
 
     - name: Run test script
-      run: poetry run python ./Untitled.py
+      run: poetry run ipython ./Untitled.py
 
     - name: Compare generated image with reference image
       run: poetry run python compare_images.py
