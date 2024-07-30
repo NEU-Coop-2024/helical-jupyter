@@ -24,8 +24,8 @@ Begin by cloning the repository from Github and then navigate to the top directo
 
 While inside the `helical-jupyter` folder, create a virtual environment to install the project and its dependencies:
 
-* Windows: `py -m venv {name of your virtual environment}`
-* OSX: `python3 -m venv {name of your virtual environment}`
+- Windows: `py -m venv {name of your virtual environment}`
+- OSX: `python3 -m venv {name of your virtual environment}`
 
 Activate your virtual environment:
 
