@@ -57,6 +57,9 @@ jobs:
       working-directory: ./scripts
       run: poetry run ipython ./Untitled.py
 
+    - name: List files in scripts directory
+      run: ls -la ./scripts
+
     - name: Compare generated image with reference image
       run: poetry run python compare_images.py
 
