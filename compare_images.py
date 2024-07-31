@@ -7,11 +7,9 @@ def compare_images(img1_path, img2_path):
     diff = ImageChops.difference(img1, img2)
     
     if diff.getbbox() is None:
-        print("Images are identical")
         exit(0)
     else:
-        print("Images are different")
         exit(132)
 
 if __name__ == "__main__":
-    compare_images('./Untitled.png', 'Resources/graph_20240730_143149.png')
+    compare_images('./scripts/Untitled.png', 'Resources/graph_20240730_143149.png')
