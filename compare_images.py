@@ -7,8 +7,10 @@ def compare_images(img1_path, img2_path):
     diff = ImageChops.difference(img1, img2)
     
     if diff.getbbox() is None:
+        print("same")
         exit(0)
     else:
+        print("different")
         exit(132)
 
 if __name__ == "__main__":
