@@ -14,4 +14,4 @@ def compare_images(img1_path, img2_path):
         exit(132)
 
 if __name__ == "__main__":
-    compare_images('./scripts/Untitled.png', 'Resources/graph_20240730_143149.png')
+    compare_images('./graph_20240730_143149.png', 'Resources/graph_20240730_143149.png')
