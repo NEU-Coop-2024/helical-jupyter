@@ -2,7 +2,7 @@
 
 ## Introduction
 
-echo_append is a Python project aimed at creating custom IPython cell magics for Jupyter Notebooks. The primary functionality is to accumulate and display the results of all executed cells, along with a 'Success!' message at the end.
+echo_append is a Python project aimed at creating custom IPython cell magics for Jupyter Notebooks. The primary functionality is to accumulate DOT language code and display the results of all executed cells as PNGs.
 
 ## Dependencies
 
@@ -10,8 +10,10 @@ Python 3.11.9
 Poetry 1.8.3
 Jupyter notebook 7.2.1
 IPython 8.26.0
+Graphviz 12.0
+Pillow 10.4.0
 
-Esure that you have poetry and jupyter installed
+Ensure that you have poetry and jupyter installed
 
 Jupyter installation: https://jupyter.org/install
 Poetry installation: https://python-poetry.org/docs/
@@ -49,39 +51,22 @@ Before using echo_append in your Jupyter Notebook, you need to load it as an ext
 To call the custom magic:
 
 `%%echo_append`
-followed by any number of print statements, i.e
+followed by DOT code, i.e
 
 ```
 %%echo_append
-print('1')
-print('12')
+digraph G {
+    A -> B;
+    B -> C;
+    C -> A;
+    C -> A;
+}
 ```
 
-which should produce an output of:
+which will produce an image of a graph, along with a 'Success!' string appended at the end
+(Please see the `Resources` folder for an example image output)
 
-```
-1
-12
-Success!
-```
-
-If you were to create another cell after the previos one with a call to `%%echo_append` i.e.
-
-```
-%%echo_append
-print('123')
-print('1234')
-```
-
-the state would be preserved such that the previous cells' outputs would be appended together
-
-```
-1
-12
-123
-1234
-Success!
-```
+You can enter in some other DOT code in a different cell, which will produce an image as specified in the cell
 
 ## Tooling recommendations
 
