@@ -4,3 +4,4 @@ venv
 *.err
 poetry.lock
 .venv
+*.png

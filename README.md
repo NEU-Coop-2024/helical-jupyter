@@ -31,7 +31,7 @@ While inside the `helical-jupyter` folder, create a virtual environment to insta
 
 Activate your virtual environment:
 
-Windows: `.\{name of virtual environment}\Sciprts\activate`
+Windows: `.\{name of virtual environment}\Scripts\activate`
 OSX:`./{name of virtual environment}/bin/activate`
 
 Install the project (make the package accessible from any location when the virtual environment is activated):
