@@ -1,0 +1,8 @@
+digraph G {
+    "A" [label="A"];
+    "B" [label="B"];
+    "C" [label="C"];
+    "A" -> "B" [label="(pop1) "];
+    "B" -> "A" [label="(pop2) "];
+    "C" -> "A" [label="(pop3) "];
+}

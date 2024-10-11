@@ -19,10 +19,12 @@ whitespace = ~r"\s*"
 def get_graph(obj):
     graph = {'nodes' : [], 'edges' : []}
     for child in obj.children:
-        if child.expr_name == "causal":
+        if child.expr_name == "hyp":
+            htype = child.children[0].text
+            causal = child.children[1]
             lhs, tos, froms = True, [], []
 
-            for kid in child.children:
+            for kid in causal.children:
                 if kid.text == "<-":
                     lhs = False 
                     continue
@@ -32,7 +34,8 @@ def get_graph(obj):
                     froms.append(kid.text)
             
             for from_node in froms:
-                graph['edges'].extend([(from_node, to_node) for to_node in tos])
+                for to_node in tos:
+                    graph['edges'].append((from_node, to_node, htype))
         elif child.expr_name == "var":
             graph['nodes'].append(child.text)
         else:
@@ -58,7 +61,7 @@ class EchoMagics(Magics):
         for node in graph_data['nodes']:
             dot_string += f'    "{node}" [label="{node}"];\n'
         for edge in graph_data['edges']:
-            dot_string += f'    "{edge[0]}" -> "{edge[1]}";\n'
+            dot_string += f'    "{edge[0]}" -> "{edge[1]}" [label="{edge[2]}"];\n'
         dot_string += "}"
         
         # Use graphviz to render the DOT string
